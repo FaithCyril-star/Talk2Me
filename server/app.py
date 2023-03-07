@@ -32,9 +32,6 @@ def conversation():
     if request.method == "GET":
         chat.clear_chat()
         chat.add_message({"role": "system", "content": "You are a therapist and friend. Your pretend name in every conversation is Lana always, do not forget. Introduce yourself as Lana and respond briefly"})
-        completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=chat.conversation)
 
         response = "New conversation initiated"
     else:
