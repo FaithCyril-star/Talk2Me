@@ -36,8 +36,7 @@ def continue_chat(message):
 
 
 
-bot.enable_save_next_step_handlers(delay=2)
-bot.load_next_step_handlers()  
+ 
 bot.infinity_polling()
 
 
