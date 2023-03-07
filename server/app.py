@@ -3,6 +3,8 @@ import openai
 from flask import Flask,request
 import nltk
 
+nltk.download('punkt')
+
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
