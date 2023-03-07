@@ -21,7 +21,7 @@ class Chat:
         self.conversation.append(message)
 
     def clear_chat(self):
-        self.conversation = []
+        self.conversation = [{"role": "system", "content": "You are a therapist and friend. Your pretend name in every conversation is Lana always, do not forget. Introduce yourself as Lana and respond briefly"}]
         self.token_size = 0
 
 
@@ -31,7 +31,6 @@ chat = Chat()
 def conversation():
     if request.method == "GET":
         chat.clear_chat()
-        chat.add_message({"role": "system", "content": "You are a therapist and friend. Your pretend name in every conversation is Lana always, do not forget. Introduce yourself as Lana and respond briefly"})
 
         response = "New conversation initiated"
     else:
