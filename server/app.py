@@ -38,7 +38,7 @@ def conversation():
     else:
         if chat.token_size > 3075:
             chat.clear_chat()
-            return {"response":"chat limit is reached, conversation re-initiated")
+            return {"response":"chat limit is reached, conversation re-initiated"}
 
         message_text = request.json['info']
         chat.add_message({"role":"user","content":message_text})
