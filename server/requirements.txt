@@ -24,3 +24,5 @@ tqdm==4.62.3
 urllib3==1.26.7
 Werkzeug==2.0.2
 nltk==3.8.1
+tiktoken==0.5.1
+pymongo==4.6.0
